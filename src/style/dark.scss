@@ -1,0 +1,122 @@
+
+
+.app{
+  .homeContainer{
+  position: relative;
+  // background:rgb(232,232,232);
+    background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 200px);
+  left: 200px;
+  transition: all 0.5s ease;
+
+  .homeContent{
+    padding-top: 5rem;
+  }
+  }
+}
+.app.dark {
+  // background-color: #111;
+  color: rgb(156, 156, 156);
+
+  .chartGrid {
+    stroke: rgba(228, 228, 228, 0.219);
+  }
+
+  .homeContainer {
+    background-color: #111;
+
+  }
+
+  .table {
+    background-color: #111;
+
+    .tableCell {
+      color: gray;
+    }
+  }
+
+  .widget,.featured,.chart{
+    background-color: #111;
+
+  }
+
+  .navbars {
+    color: #999;
+    border-color: #333;
+    background-color: #111;
+
+    .toggle{
+      background-color: #333;
+      color: white;
+    }
+
+    .search {
+      border-color: gray;
+    }
+  }
+
+  .sidebar {
+    background-color: #111;
+    border-color: #333;
+
+    .top {
+    // border-right: 1px solid rgb(156, 156, 156);
+    background-color: #111;
+
+
+      .logo {
+        color: #999;
+      }
+    }
+    hr {
+      border-color: #333;
+    }
+
+    ul {
+      li {
+        &:hover {
+          background-color: #333;
+        }
+
+        .icon {
+          color: #999;
+        }
+      }
+    }
+  }
+
+  .datatable {
+    .datagrid {
+      color: gray;
+      border: none;
+
+      .viewButton,
+      .deleteButton,
+      .cellWithStatus {
+        color: gray;
+        border: none;
+      }
+    }
+  }
+
+  input{
+      background-color: transparent;
+  }
+}
+
+.sidebar.active ~ .homeContainer{
+  left: 55px;
+  width: calc(100% - 55px);
+}
+
+@media (max-width:600px) { 
+  .app{
+      .homeContainer{
+  //  background-color: red;
+    //  width: calc(100% - 55px);
+    // left: 55px;
+  }
+  }
+
+ }
